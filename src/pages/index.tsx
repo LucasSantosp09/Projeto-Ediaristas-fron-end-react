@@ -1,22 +1,29 @@
-import { Inter } from 'next/font/google';
-import { NextPage } from 'next';
-import SafeEnvironment from 'ui/components/feedback/SafeEnvironment/SafeEnvironment';
-import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
+import { Inter } from "next/font/google";
+import { NextPage } from "next";
+import SafeEnvironment from "ui/components/feedback/SafeEnvironment/SafeEnvironment";
+import PageTitle from "ui/components/data-display/PageTitle/PageTitle";
+import UserInformation from "ui/components/data-display/UserInformation/UserInformation";
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-     <div>
-      <SafeEnvironment />
-      <PageTitle 
-        title = {'Conheça os profissionais'} 
-        subtitle = {'Preencha seu endereço e veja todos os profissionais da sua localidade'}
+      <div>
+        <SafeEnvironment />
+        <PageTitle
+          title={"Conheça os profissionais"}
+          subtitle={
+            "Preencha seu endereço e veja todos os profissionais da sua localidade"
+          }
         />
-     </div>
-
+        <UserInformation
+          name={"Lucas Santos"}
+          picture={"https://github.com/LucasSantosp09.png"}
+          rating={3}
+          description={"Betim-MG"}
+        />
+      </div>
     </>
-  )
+  );
 }
