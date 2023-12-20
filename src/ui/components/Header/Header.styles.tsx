@@ -20,7 +20,7 @@ export const HeaderAppBar = styled(AppBar)`
 `;
 
 export const HeaderLogo = styled("img")`
-  height: 25px;
+  height: 35px;
   ${({ theme }) => theme.breakpoints.down("md")} {
     height: 47px;
   }
