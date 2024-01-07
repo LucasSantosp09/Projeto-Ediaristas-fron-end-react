@@ -11,7 +11,7 @@ import { ProfissionaisContainer } from "@styles/pages/index.style";
 import useIndex from "data/hooks/pages/useIndex.page";
 
 export default function Home() {
-  const { cep, setCep } = useIndex();
+  const { cep, setCep, cepValido } = useIndex();
 
   return (
     <>
@@ -34,8 +34,7 @@ export default function Home() {
               value={cep || ""}
               onChange={(event) => setCep(event.target.value)}
             />
-
-            {cep}
+            {cepValido}
             <Typography color={"error"}>CEP inválido</Typography>
             <Button
               variant={"contained"}
