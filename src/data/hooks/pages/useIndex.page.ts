@@ -38,5 +38,11 @@ export default function useIndex() {
     cep,
     setCep,
     cepValido,
+    buscarProfissionais,
+    erro,
+    diaristas,
+    buscaFeita,
+    carregando,
+    diaristasRestantes,
   };
 }
